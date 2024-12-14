@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/MindHavenApp.war /app/MindHavenApp.war
 
 # Expose the default application port
-EXPOSE 8080
+EXPOSE 8083
 
 # Command to run the application
 ENTRYPOINT ["java", "-jar", "/app/MindHavenApp.war"]
