@@ -6,3 +6,12 @@ Linux / MacOS
 
 Windows 
 1.run as normal procedure.
+
+
+
+step to run :
+
+1. mvn install package
+2. mvn clean package
+3. docker build -t mindhaven-app .   
+4. docker run -d -p 8080:8080 --name mindhaven-app-container mindhaven-app
