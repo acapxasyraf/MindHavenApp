@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Patient Profile</title>
+    <title>Edit Patient Profile</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -234,76 +234,76 @@
 
     <main class="main-content">
         <div class="form-container">
-            <h1>Create Patient Profile</h1>
-            <p class="subheader">All fields are mandatory. Your details will remain private and confidential.</p>
+            <h1>Edit Patient Profile</h1>
+            <p class="subheader">Update the fields as required. Ensure accuracy for proper record maintenance.</p>
 
-            <form action="/submit" method="POST">
+            <form action="/update" method="POST">
                 <div class="form-group half">
                     <label for="patientId">Patient ID</label>
-                    <input type="text" id="patientId" name="patientId" value="MY012343" readonly>
+                    <input type="text" id="patientId" name="patientId" value="<%= request.getAttribute("patientId") %>" readonly>
                 </div>
 
                 <div class="form-group half">
                     <label for="idCard">Identification Card No</label>
-                    <input type="text" id="idCard" name="idCard" placeholder="Your Identification Card No">
+                    <input type="text" id="idCard" name="idCard" value="<%= request.getAttribute("idCard") %>">
                 </div>
 
                 <div class="form-group half">
                     <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" placeholder="Your full name">
+                    <input type="text" id="fullName" name="fullName" value="<%= request.getAttribute("fullName") %>">
                 </div>
 
                 <div class="form-group half">
                     <label for="phone">Phone</label>
-                    <input type="text" id="phone" name="phone" placeholder="Phone">
+                    <input type="text" id="phone" name="phone" value="<%= request.getAttribute("phone") %>">
                 </div>
 
                 <div class="form-group">
                     <label for="address">Address</label>
-                    <input type="text" id="address" name="address" placeholder="Address">
+                    <input type="text" id="address" name="address" value="<%= request.getAttribute("address") %>">
                 </div>
 
                 <div class="form-group half">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Email">
+                    <input type="email" id="email" name="email" value="<%= request.getAttribute("email") %>">
                 </div>
 
                 <div class="form-group half">
                     <label for="dob">DOB</label>
-                    <input type="date" id="dob" name="dob">
+                    <input type="date" id="dob" name="dob" value="<%= request.getAttribute("dob") %>">
                 </div>
 
                 <div class="form-group">
                     <label>Gender</label>
                     <div class="radio-group">
-                        <label><input type="radio" name="gender" value="female"> Female</label>
-                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female" <%= "female".equals(request.getAttribute("gender")) ? "checked" : "" %>> Female</label>
+                        <label><input type="radio" name="gender" value="male" <%= "male".equals(request.getAttribute("gender")) ? "checked" : "" %>> Male</label>
                     </div>
                 </div>
 
                 <div class="form-group half">
                     <label for="zip">Zip / Postal Code</label>
-                    <input type="text" id="zip" name="zip" placeholder="Zip / Postal Code">
+                    <input type="text" id="zip" name="zip" value="<%= request.getAttribute("zip") %>">
                 </div>
 
                 <div class="form-group half">
                     <label for="city">City</label>
-                    <input type="text" id="city" name="city" placeholder="City">
+                    <input type="text" id="city" name="city" value="<%= request.getAttribute("city") %>">
                 </div>
 
                 <div class="form-group half">
                     <label for="state">State / Province</label>
-                    <input type="text" id="state" name="state" placeholder="State / Province">
+                    <input type="text" id="state" name="state" value="<%= request.getAttribute("state") %>">
                 </div>
 
                 <div class="form-group">
                     <label for="medicalHistory">Medical History</label>
-                    <textarea id="medicalHistory" name="medicalHistory" placeholder="List of history"></textarea>
+                    <textarea id="medicalHistory" name="medicalHistory"><%= request.getAttribute("medicalHistory") %></textarea>
                 </div>
 
                 <div class="button-group">
-                    <button type="button" class="button cancel">Cancel</button>
-                    <button type="submit" class="button submit">Submit</button>
+                    <button type="button" class="button cancel" onclick="window.history.back();">Cancel</button>
+                    <button type="submit" class="button submit">Update</button>
                 </div>
             </form>
         </div>
