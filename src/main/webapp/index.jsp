@@ -229,8 +229,8 @@
             </ul>
         </nav>
         <div class="auth-buttons">
-            <a href="#" class="sign-in">Sign In</a>
-            <a href="#" class="sign-up">Sign Up</a>
+            <a href="/login.jsp" class="sign-in">Sign In</a>
+            <a href="WEB-INF/views/signup.jsp" class="sign-up">Sign Up</a>
         </div>
     </div>
 </header>
