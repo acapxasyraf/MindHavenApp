@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindHaven Sign-Up</title>
-<!--    <style>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -132,11 +132,11 @@
                 max-width: 200px;
             }
         }
-    </style> -->
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="right">
+        <div class="left">
             <h1>Create an account</h1>
             <form class="form">
                 <label for="full-name">Full name</label>
