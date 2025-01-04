@@ -123,12 +123,12 @@
         <div class="logo">MindHaven</div>
         <ul class="menu">
             <li><a href="#"><span>🏠</span> Home</a></li>
-            <li><a href="#"><span>📅</span> Appointments</a></li>
-            <li><a href="#"><span>📋</span> Patient Record</a></li>
-            <li><a href="#"><span>👤</span> User Management</a></li>
-            <li><a href="#"><span>⚙️</span> System Settings</a></li>
-            <li><a href="#"><span>🛠️</span> General Settings</a></li>
-            <li><a href="#"><span>🧪</span> Self-Test</a></li>
+            <li><a href="/appointment/list_appointment"><span>📅</span> Appointments</a></li>
+            <li><a href="/patient/list_patient"><span>📋</span> Patient Record</a></li>
+            <li><a href="/user/user_management"><span>👤</span> User Management</a></li>
+            <li><a href="/setting/system_setting"><span>⚙️</span> System Settings</a></li>
+            <li><a href="/setting/general_setting"><span>🛠️</span> General Settings</a></li>
+            <li><a href="/test/list_test"><span>🧪</span> Self-Test</a></li>
         </ul>
     </div>
     <div class="main-content">

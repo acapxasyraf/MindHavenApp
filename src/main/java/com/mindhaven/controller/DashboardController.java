@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class DashboardController {
 
     @GetMapping("/dashboard")
-    public String dashboardPage() {
-        return "dashboard"; // Maps to dashboard.jsp
+    public String showDashboard() {
+        return "dashboard"; // Resolves to /WEB-INF/views/dashboard.jsp
     }
 }

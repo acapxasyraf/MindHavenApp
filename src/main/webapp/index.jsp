@@ -223,14 +223,14 @@
         <nav class="nav">
             <ul>
                 <li><a href="#">Features</a></li>
-                <li><a href="#">Self-Test</a></li>
+                <li><a href="WEB-INF/views/test/dass_test">Self-Test</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Blog</a></li>
             </ul>
         </nav>
         <div class="auth-buttons">
-            <a href="/login.jsp" class="sign-in">Sign In</a>
-            <a href="WEB-INF/views/signup.jsp" class="sign-up">Sign Up</a>
+            <a href="/login" class="sign-in">Sign In</a>
+            <a href="/signup" class="sign-up">Sign Up</a>
         </div>
     </div>
 </header>

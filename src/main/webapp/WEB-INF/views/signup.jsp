@@ -150,7 +150,7 @@
 
                 <button type="submit">Sign up</button>
             </form>
-            <p>Already have an account? <a href="#">Sign in</a></p>
+            <p>Already have an account? <a href="/loginUser">Sign in</a></p>
         </div>
         <div class="right">
             <img src="illustration.png" alt="Illustration">
