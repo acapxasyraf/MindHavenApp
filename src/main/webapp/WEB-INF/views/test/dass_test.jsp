@@ -107,6 +107,26 @@
             background: #aaa;
         }
     </style>
+    <script>
+        // JavaScript to handle form submission
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Show a confirmation dialog
+            const isConfirmed = confirm("Are you sure you want to submit your answers?");
+            if (isConfirmed) {
+                // If the user clicks "OK"
+                alert("Answers submitted successfully!");
+                window.location.href = "/test/testResult"; // Redirect to test result page
+            }
+        }
+
+        // JavaScript to handle cancel button
+        function handleCancel() {
+            // Redirect to the home page
+            window.location.href = "/";
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -253,8 +273,8 @@
             </div>
 
             <div class="actions">
-                <button type="button" class="cancel">Cancel</button>
-                <button type="submit">Submit</button>
+                <button type="button" class="cancel" onclick="handleCancel()">Cancel</button>
+                <button type="submit" onclick="handleSubmit(event)">Submit</button>
             </div>
         </form>
     </div>

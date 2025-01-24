@@ -190,14 +190,14 @@
         <nav class="nav">
             <ul>
                 <li><a href="#">Features</a></li>
-                <li><a href="#">Self-Test</a></li>
+                <li><a href="/test/dass">Self-Test</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Blog</a></li>
             </ul>
         </nav>
         <div class="auth-buttons">
-            <a href="#" class="sign-in">Sign In</a>
-            <a href="#" class="sign-up">Sign Up</a>
+            <a href="/loginUser" class="sign-in">Sign In</a>
+            <a href="/signup" class="sign-up">Sign Up</a>
         </div>
     </div>
 </header>
@@ -208,8 +208,7 @@
         <h1>Website heading goes here</h1>
         <p>Occaecat est ipsum reprehenderit reprehenderit veniam anim laborum est esse duis occaecat reprehenderit pariatur.</p>
         <div class="hero-buttons">
-            <a href="#" class="join">Join us now</a>
-            <a href="#" class="outline">Go For Self-test</a>
+            <a href="/test/dass" class="outline">Go For Self-test</a>
         </div>
     </div>
 </section>
