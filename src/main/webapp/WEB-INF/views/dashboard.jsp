@@ -116,20 +116,38 @@
             border-radius: 10px;
             padding: 20px;
         }
+
+        .logout-button {
+            margin-top: auto;
+            padding: 10px;
+            background-color: #7c4efb;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .logout-button:hover {
+            background-color: #5a3ecb;
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
         <div class="logo">MindHaven</div>
         <ul class="menu">
-            <li><a href="#"><span>🏠</span> Home</a></li>
-            <li><a href="/appointment/list_appointment"><span>📅</span> Appointments</a></li>
-            <li><a href="/patient/list_patient"><span>📋</span> Patient Record</a></li>
-            <li><a href="/user/user_management"><span>👤</span> User Management</a></li>
-            <li><a href="/setting/system_setting"><span>⚙️</span> System Settings</a></li>
-            <li><a href="/setting/general_setting"><span>🛠️</span> General Settings</a></li>
-            <li><a href="/test/list_test"><span>🧪</span> Self-Test</a></li>
+            <li><a href="<c:url value='/views/dashboard.jsp' />"><span>🏠</span> Home</a></li>
+            <li><a href="<c:url value='/views/appointment/viewappointment.jsp' />"><span>📅</span> Appointments</a></li>
+            <li><a href="<c:url value='/views/patient/list_patient.jsp' />"><span>📋</span> Patient Record</a></li>
+            <li><a href="<c:url value='/views/user/usermanagement.jsp' />"><span>👤</span> User Management</a></li>
+            <li><a href="<c:url value='/views/setting/systemsetting.jsp' />"><span>⚙️</span> System Settings</a></li>
+            <li><a href="<c:url value='/views/setting/generalsetting.jsp' />"><span>🛠️</span> General Settings</a></li>
+            <li><a href="'/views/test/list_test.jsp'"><span>🧪</span> Self-Test</a></li>
         </ul>
+        <a href="/home" class="logout-button" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+        <form id="logout-form" action="/home" method="POST" style="display: none;">
+            <input type="hidden" name="_method" value="POST">
+        </form>
     </div>
     <div class="main-content">
         <div class="overview">

@@ -8,9 +8,9 @@
         <!-- Set the db name here  -->
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/localmysql_db</property>
         <!-- Set the db username here -->
-        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.username">mindhaven</property>
         <!-- Set the db password here  -->
-        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.connection.password">@Bcd1234</property>
 
         <!-- JDBC connection pool settings -->
         <property name="hibernate.c3p0.min_size">5</property>

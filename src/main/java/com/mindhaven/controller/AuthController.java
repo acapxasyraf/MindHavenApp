@@ -34,4 +34,10 @@ public class AuthController {
     public String signup() {
         return "signup"; // Refers to signup.jsp
     }
+
+    @GetMapping("/logout")
+    public String logout() {
+        // Invalidate session or perform other logout operations here
+        return "redirect:/home"; // Redirect to home page after logout
+    }
 }
