@@ -130,15 +130,22 @@
 </head>
 <body>
     <div class="container">
+        <% if (request.getAttribute("error") != null) { %>
+            <div style="color: red; text-align: center;">
+                <p><%= request.getAttribute("error") %></p>
+            </div>
+        <% } %>
+        
         <h1>Welcome back 👋</h1>
-        <form>
+        <form action="/loginUser" method="post">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password" required>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
             <div class="actions">
                 <div class="checkbox">
@@ -150,7 +157,7 @@
             <button type="submit">Sign in</button>
         </form>
         <div class="footer">
-            Not a member yet? <a href="#">Register now</a>
+            Not a member yet? <a href="/signup">Register now</a>
         </div>
     </div>
 </body>

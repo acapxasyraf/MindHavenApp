@@ -1,22 +1,19 @@
 package com.mindhaven.controller;
-
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class LoginController {
+public class AuthController {
 
-    @RequestMapping("/loginUserNew")
-    public String showLoginPage() {
-        return "login";
+    @GetMapping("/loginUser")
+    public String login() {
+        return "login"; // Refers to login.jsp
     }
 
-    @PostMapping("/loginUserNew")
+    @PostMapping("/loginUser")
     public ModelAndView handleLogin(
             @RequestParam("email") String email,
             @RequestParam("password") String password) {
@@ -31,5 +28,16 @@ public class LoginController {
         ModelAndView modelAndView = new ModelAndView("login");
         modelAndView.addObject("error", "Invalid email or password");
         return modelAndView;
+    }
+
+    @GetMapping("/signup")
+    public String signup() {
+        return "signup"; // Refers to signup.jsp
+    }
+
+    @GetMapping("/logout")
+    public String logout() {
+        // Invalidate session or perform other logout operations here
+        return "redirect:/home"; // Redirect to home page after logout
     }
 }

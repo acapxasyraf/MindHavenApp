@@ -13,6 +13,6 @@ public class HomeController {
 
     @GetMapping("/")
     public String index() {
-        return "home"; // Maps to home.jsp
+        return "redirect:/home"; // Redirects to /home
     }
 }
