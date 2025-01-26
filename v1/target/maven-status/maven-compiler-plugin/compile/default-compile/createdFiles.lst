@@ -1,0 +1,8 @@
+com/mindhaven/controller/AuthController.class
+com/mindhaven/controller/DashboardController.class
+com/mindhaven/controller/HomeController.class
+com/mindhaven/config/SecurityConfig.class
+com/mindhaven/MindHavenApp.class
+com/mindhaven/controller/TestController.class
+com/mindhaven/controller/LoginController.class
+com/mindhaven/config/WebConfig.class
